@@ -64,5 +64,5 @@ app.delete('/usuario/:id', (req, res) => {
 
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log('Server: http://localgost:', process.env.PORT || 3000);
+    console.log('Server: http://localhost:', process.env.PORT || 3000);
 });
