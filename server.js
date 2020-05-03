@@ -22,10 +22,11 @@ app.use(usuario);
 
 // const options = (require('./config/config').mongodb === 'env') ? { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true } : {};
 
-mongoose.connect('mongodb+srv://admin-cafe:b2MMfLhwFGbqcD9@cafe-yd94t.mongodb.net/CafeDB', { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true },
+mongoose.connect('mongodb+srv://admin-cafe:b2MMfLhwFGbqcD9@cafe-yd94t.mongodb.net/CafeDB',
     (error, resp) => {
         if (error) {
-            return console.log('Error de conexion a BD CafeDB : ', error);
+            throw error(error);
+            // return console.log('Error de conexion a BD CafeDB : ', error);
         }
         console.log('Base de datos CafeDB inicializada', resp.client.s.url);
     });
