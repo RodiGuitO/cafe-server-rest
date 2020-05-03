@@ -20,15 +20,15 @@ app.use(bp.json());
 
 app.use(usuario);
 
-const options = (require('./config/config').mongodb === 'env') ? { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true } : {};
+// const options = (require('./config/config').mongodb === 'env') ? { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true } : {};
 
-mongoose.connect(process.env.NODE_ENV, options, (error, resp) => {
+mongoose.connect(process.env.URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }, (error, resp) => {
     if (error) {
         return console.log('Error de conexion a BD CafeDB : ', error);
     }
     console.log('Base de datos CafeDB inicializada', resp.client.s.url);
 });
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log('Server: http://localhost:', process.env.PORT || 3000);
+app.listen(process.env.PORT, () => {
+    console.log('Server: http://localhost:', process.env.PORT);
 });
