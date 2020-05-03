@@ -23,7 +23,7 @@ app.use(usuario);
 
 // const options = (require('./config/config').mongodb === 'env') ? { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true } : {};
 
-mongoose.connect(process.env.URL,
+mongoose.connect(process.env.URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true },
     (error, resp) => {
         if (error) {
             // throw error(error);
