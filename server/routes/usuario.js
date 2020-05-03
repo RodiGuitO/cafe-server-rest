@@ -17,9 +17,9 @@ app.get('/', function(req, res) {
 // ======================================================================================
 
 // postman .../usuario/list?desde=5
-app.get('/usuario/list', function(req, res) {
+app.get('/usuario/list/:desde', function(req, res) {
     // para skip
-    var count = req.query.desde || 0,
+    var count = req.params.desde || 0,
         // hardcodear => obligar a un formato
         // @ts-ignore
         count = Number(count);
