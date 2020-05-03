@@ -9,6 +9,6 @@ const url_db = (mongodb === 'dev') ?
     'mongodb://localhost:27017/CafeDB' :
     'mongodb+srv://admin-cafe:b2MMfLhwFGbqcD9@cafe-yd94t.mongodb.net/CafeDB';
 
-process.env.URL = process.env.MONGO_URI; //url_db;
+process.env.URL = url_db;
 
-module.exports = { mongodb };
+// module.exports = { mongodb };

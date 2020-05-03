@@ -9,7 +9,7 @@ let Usuario = require('../models/usuario');
 let bcrypt = require('bcrypt');
 
 app.get('/', function(req, res) {
-    res.json('Server run');
+    res.json({ message: 'Server run' });
 });
 
 // ======================================================================================
