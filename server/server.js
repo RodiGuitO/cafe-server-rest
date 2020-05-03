@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 // @ts-ignore
 require('./config/config');
 
-let usuario = require('../server/routes/usuario');
+let usuario = require('./routes/usuario');
 // para uso x-www-form-encoded paso de parametros por html
 const bp = require('body-parser');
 
