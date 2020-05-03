@@ -7,8 +7,7 @@ const mongodb = process.env.NODE_ENV || 'dev';
 
 const url_db = (mongodb === 'dev') ?
     'mongodb://localhost:27017/CafeDB' :
-    'mongodb+srv://admin-cafe:b2MMfLhwFGbqcD9@cafe-yd94t.mongodb.net/CafeDB?retryWrites=true&w=majority';
-// no va -> 'mongodb+srv://admin-cafe:b2MMfLhwFGbqcD9@cafe-yd94t.mongodb.net/CafeDB';
+    process.env.MONGO_URI;
 
 process.env.URL = url_db;
 

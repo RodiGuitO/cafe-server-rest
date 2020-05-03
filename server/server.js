@@ -33,5 +33,5 @@ mongoose.connect(process.env.URL, { useUnifiedTopology: true, useNewUrlParser: t
     });
 
 app.listen(process.env.PORT, () => {
-    console.log('Server: http://localhost:', process.env.PORT);
+    console.log(`Server: http://localhost:`, process.env.PORT);
 });
