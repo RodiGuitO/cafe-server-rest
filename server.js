@@ -22,7 +22,7 @@ app.use(usuario);
 
 // const options = (require('./config/config').mongodb === 'env') ? { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true } : {};
 
-mongoose.connect('mongodb+srv://admin-cafe:b2MMfLhwFGbqcD9@cafe-yd94t.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://admin-cafe:b2MMfLhwFGbqcD9@cafe-yd94t.mongodb.net/CafeDB?retryWrites=true&w=majority',
     (error, resp) => {
         if (error) {
             throw error(error);
